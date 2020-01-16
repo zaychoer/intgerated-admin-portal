@@ -1,0 +1,141 @@
+.feed {
+  margin: 0.75em 0;
+  width: 100%;
+  padding: 0.5em;
+  background-color: $white;
+  box-shadow: $shadow-bottom-15-grey-035;
+  border-radius: 12px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  &__image {
+    width: 20%;
+    float: left;
+    position: relative;
+    & img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    & p {
+      background-color: $black-060;
+      position: absolute;
+      font-size: $font-sm;
+      font-weight: 700;
+      color: $white;
+      padding: 0.25em 0.5em;
+      top: 1em;
+      left: 1em;
+      border-radius: 12px;
+    }
+  }
+  &__content {
+    width: 80%;
+    float: left;
+    padding: 0 1em;
+    &__top {
+      width: 80%;
+      float: left;
+      margin-bottom: 1.5em;
+      & p {
+        text-transform: capitalize;
+        &:nth-child(1) {
+          font-size: $font-sm;
+          color: $black-060;
+        }
+        &:nth-child(2) {
+          font-size: $font-md;
+          color: $black;
+        }
+      }
+    }
+    &__date {
+      width: 20%;
+      float: left;
+      font-size: $font-sm;
+      margin-bottom: 1.5em;
+      text-align: right;
+      color: $black-060;
+    }
+    &__bottom {
+      clear: both;
+      width: 100%;
+      &__details {
+        display: block;
+        overflow: hidden;
+        & svg {
+          margin-top: 0.25em;
+          width: 20%;
+          float: left;
+          fill: $primary-color;
+        }
+        &__block {
+          width: 77%;
+          margin-left: 3%;
+          float: left;
+          & p {
+            text-transform: capitalize;
+            font-size: $font-sm;
+            &:nth-child(1) {
+              color: $black-060;
+            }
+            &:nth-child(2) {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $shadow-bottom-35-grey-035;
+  }
+  &--modal {
+    box-shadow: unset;
+    border: 1px solid $black-015;
+    cursor: unset;
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .feed {
+    padding: 1em;
+    &__image {
+      & img {
+        height: 125px;
+      }
+      & p {
+        font-size: $font-md;
+      }
+    }
+    &__content {
+      &__top {
+        & p {
+          &:nth-child(1) {
+            font-size: $font-md;
+          }
+          &:nth-child(2) {
+            font-size: $font-lg;
+          }
+        }
+      }
+      &__date {
+        font-size: $font-md;
+      }
+      &__bottom {
+        &__details {
+          &__block {
+            margin-top: 0.5em;
+            & p {
+              font-size: $font-md;
+            }
+          }
+        }
+      }
+    }
+  }
+}

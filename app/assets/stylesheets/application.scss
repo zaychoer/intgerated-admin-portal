@@ -1,0 +1,54 @@
+@import "variable";
+@import "animation";
+@import "grid";
+@import "element";
+
+@import "navbar";
+@import "footer";
+
+@import "./home/headline";
+@import "./home/floating_menu";
+@import "./home/information";
+@import "./home/join";
+@import "./home/trivia";
+
+@import "button";
+@import "dropdown";
+@import "modal";
+@import "input";
+@import "table";
+@import "progress";
+@import "carousel";
+@import "sidebar";
+@import "document";
+@import "master";
+@import "card";
+@import "balance";
+@import "feed";
+@import "filter";
+@import "snackbar";
+@import "loading";
+
+@import "global";
+
+*:before,
+*:after,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #F6F8F9;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-base;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}

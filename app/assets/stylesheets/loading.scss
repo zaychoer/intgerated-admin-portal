@@ -1,0 +1,11 @@
+.loading {
+  width: 25px;
+  height: 25px;
+  margin-top: 0.75em;
+  background: transparent;
+  border-top: 3px solid $primary-color;
+  border-right: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: 1.5s spin linear infinite;
+  animation: 1.5s spin linear infinite;
+}

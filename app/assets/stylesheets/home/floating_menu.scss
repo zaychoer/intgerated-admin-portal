@@ -1,0 +1,63 @@
+.floating-menu {
+  position: absolute;
+  transform: translate(0, 25%);
+  width: 32%;
+  background-color: $white;
+  min-height: 250px;
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: $shadow-bottom-5-black-035;
+  &__list {
+    text-align: center;
+    color: $black;
+    border-bottom: 1px solid $black-035;
+    font-size: $font-sm;
+    width: 33.333333%;
+		float: left;
+		padding-top: 1em;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      border-bottom: 2px solid $black;
+    }
+    & svg {
+      width: 30px;
+      margin: 0 auto;
+    }
+    & p {
+      padding: 1em;
+    }
+  }
+  &__content {
+    clear: both;
+    display: none;
+    padding: 3em;
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+    & p {
+      &:nth-child(1) {
+        font-size: $font-xl;
+        font-weight: 800;
+      }
+      &:nth-child(2) {
+        font-size: $font-md;
+        margin: 0.5em 0;
+      }
+    }
+    & button {
+      margin-top: 1em;
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .floating-menu {
+    transform: translate(0, 55%);
+    width: 35%;
+  }
+}

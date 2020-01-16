@@ -1,0 +1,78 @@
+.button {
+  padding: 0.5em 1em;
+  font-size: $font-sm;
+  cursor: pointer;
+  &--white {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+  }
+  &--white-blueish {
+    background-color: $white-blueish;
+  }
+  &--black {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+  &--blue {
+    background-color: $blue;
+    color: $white;
+    border: 1px solid $blue;
+  }
+  &--blue-light {
+    background-color: $blue-light;
+    color: $black;
+    border: 1px solid $blue-light;
+  }
+  &--green {
+    background-color: $green;
+    color: $white;
+    border: 1px solid $green;
+  }
+  &--orange {
+    background-color: $orange;
+    color: $white;
+    border: 1px solid $orange;
+  }
+  &--transparent {
+    background-color: transparent;
+  }
+  &--radius-6 {
+    border-radius: 6px;
+  }
+  &--radius-12 {
+    border-radius: 12px;
+  }
+  &--radius-25 {
+    border-radius: 25px;
+  }
+  &--dropdown {
+    padding: 0 1em 0 0;
+  }
+  &--100 {
+    width: 100%;
+  }
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+  &--no-padding-side {
+    padding: 0.5em 0 !important;
+  }
+  &--border-grey-035 {
+    border: 1px solid $grey-035;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1920px) {
+  .button {
+    padding: 0.5em 2em;
+    font-size: $font-md;
+  }
+}

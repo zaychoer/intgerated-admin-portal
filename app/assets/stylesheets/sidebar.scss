@@ -1,0 +1,122 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: $shadow-left-35-grey-035;
+  background-color: $white;
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 1em 2em;
+  transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -webkit-transition: 0.5s ease all;
+  z-index: 1;
+  &__logo {
+    width: 100%;
+    font-size: $font-xl;
+  }
+  &__content {
+    width: 100%;
+    margin: 2em 0;
+    &__list {
+      display: block;
+      position: relative;
+      & a {
+        padding: 0.75em 0;
+        display: block;
+        & p {
+          color: $black-035;
+          font-size: $font-sm;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+        }
+        & span {
+          position: absolute;
+          top: 0%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 4px;
+          height: calc(100% - 0.75em);
+          background-color: transparent;
+          border-radius: 50px;
+          transition: 0.5s ease all;
+          -moz-transition: 0.5s ease all;
+          -webkit-transition: 0.5s ease all;
+        }
+      }
+      &.active {
+        & a {
+          & p {
+            color: $black;
+          }
+          & span {
+            top: 50%;
+            background-color: $primary-color;
+          }
+        }
+      }
+      &:hover {
+        & a {
+          & p {
+            color: $black;
+          }
+          & span {
+            top: 50%;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    box-shadow: $shadow-bottom-35-grey-035;
+    position: absolute;
+    top: 0;
+    padding: 0.57em;
+    right: -2.68em;
+    border-bottom-right-radius: 12px;
+    background-color: $primary-color;
+    cursor: pointer;
+    pointer-events: fill;
+    & button {
+      padding: 0;
+      & svg {
+        fill: $white;
+        width: 24px;
+        padding-top: 0.5em;
+        transition: 0.25s ease all;
+        -moz-transition: 0.25s ease all;
+        -webkit-transition: 0.25s ease all;
+      }
+    }
+    &:hover {
+      & button {
+        & svg {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+  &--expand {
+    transform: translateX(0%);
+  }
+  &--shrink {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 1920px) {
+  .sidebar {
+    &__content {
+      &__list {
+        & a {
+          & p {
+            font-size: $font-md;
+          }
+        }
+      }
+    }
+  }
+}

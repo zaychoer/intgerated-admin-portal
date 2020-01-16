@@ -1,0 +1,53 @@
+.trivia {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background: image-url("ships-transparent@2x.png") no-repeat center bottom;
+  position: relative;
+  &__content {
+    width: 100%;
+    position: absolute;
+    transform: translate(0, 70%);
+    &__wrapper {
+      width: 70%;
+      padding: 1em;
+      margin: 0 auto;
+      display: block;
+      & p {
+        &:nth-child(1) {
+          font-size: $font-md;
+          color: $grey;
+        }
+        &:nth-child(2) {
+          position: relative;
+          & span {
+            font-weight: 700;
+            &:nth-child(1) {
+              font-size: $font-xxxxl;
+              color: $primary-color;
+              margin-right: 0.15em;
+            }
+            &:nth-child(2) {
+              position: absolute;
+              top: 5px;
+              font-size: $font-xl;
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+    &--border-right {
+      border-right: 1px solid $grey-035;
+    }
+    &--border-left {
+      border-left: 1px solid $grey-035;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .trivia {
+    height: 400px;
+  }
+}

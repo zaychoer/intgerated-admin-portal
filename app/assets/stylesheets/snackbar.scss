@@ -1,0 +1,65 @@
+.snackbar {
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 500px;
+  border-radius: 12px;
+  z-index: 2;
+  &__content {
+    background-color: $white-blueish;
+    color: $black;
+    border: 1px solid $grey;
+    display: none;
+    width: 100%;
+    border-radius: 12px;
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.35s ease all;
+    -moz-transition: 0.35s ease all;
+    -webkit-transition: 0.35s ease all;
+    & p {
+      &:nth-child(1) {
+        font-size: $font-lg;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+      }
+      &:nth-child(2) {
+        font-size: $font-md;
+      }
+    }
+    &.show {
+      display: block;
+    }
+    &.error {
+      background-color: $red-light;
+      border-color: $red;
+      color: $white;
+    }
+    &.warning {
+      background-color: $yellow-light;
+      border-color: $yellow-dark;
+    }
+    &.success {
+      background-color: $green-light;
+      border-color: $green;
+    }
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+  &--mini {
+    width: 100%;
+    position: unset;
+    top: unset;
+    left: unset;
+    padding: 1em;
+    & p {
+      font-size: $font-md !important;
+      margin-bottom: unset !important;
+    }
+  }
+  &.active {
+    display: block;
+  }
+}

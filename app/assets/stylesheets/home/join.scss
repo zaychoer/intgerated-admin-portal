@@ -1,0 +1,36 @@
+.join {
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background: image-url("ship-deck@2x.png") no-repeat center center;
+	position: relative;
+	&__content {
+		position: absolute;
+		right: 0;
+		width: 35%;
+		transform: translate(0, 40%);
+		& p {
+			font-size: $font-xxl;
+			text-align: right;
+			font-weight: 700;
+			color: $white;
+		}
+		& button {
+			margin: 2em 0;
+			float: right;
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.join {
+		height: 400px;
+		&__content {
+			width: 40%;
+			transform: translate(0, 50%);
+			& p {
+				font-size: $font-xxxl;
+			}
+		}
+	}
+}

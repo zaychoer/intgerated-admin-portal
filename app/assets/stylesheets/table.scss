@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $grey-035;
+  border-radius: 12px;
+  overflow: hidden;
+  & thead {
+    & tr {
+      border: 1px solid $grey-035;
+      & th {
+        background-color: $grey-025;
+        color: $black-060;
+        font-size: $font-md;
+        text-align: left;
+        padding: 0.5em 1em;
+      }
+    }
+  }
+  & tbody {
+    & tr {
+      border: 1px solid $grey-035;
+      cursor: pointer;
+      & td {
+        background-color: $white;
+        font-size: $font-md;
+        color: $black;
+        padding: 1em;
+        & .status {
+          padding: 0.5em 1em;
+          font-weight: 600;
+          text-align: center;
+          text-transform: uppercase;
+          border-radius: 12px;
+          color: $white;
+          &--red {
+            background-color: $red;
+          }
+          &--orange {
+            background-color: $orange;
+          }
+          &--green {
+            background-color: $green;
+          }
+        }
+        & .stacks {
+          &:nth-of-type(2) {
+            color: $grey;
+          }
+        }
+      }
+      &:hover {
+        & td {
+          background-color: $white-crystal;
+        }
+      }
+    }
+  }
+}
