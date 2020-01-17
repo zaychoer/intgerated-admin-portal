@@ -1,0 +1,13 @@
+.columns.is-multiline
+  .column
+    table.table.is-bordered.is-striped.is-narrow.is-fullwidth
+      thead
+        tr
+          th Nama Perusahaan
+          th Web Perusahaan
+          th Description
+      tbody
+          tr
+            td = @portfolio.name_company
+            td = @portfolio.company_websitr
+            td = @portfolio.description

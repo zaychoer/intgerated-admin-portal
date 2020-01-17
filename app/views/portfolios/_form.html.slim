@@ -1,0 +1,30 @@
+.section.margin-top-multiline
+  = form_for @portfolio do |f|
+      .field.is-horizontal.is-margin-top
+        .field-label.is-normal
+          label.label
+            = f.label :name_company
+        .field-body
+          .field
+            .control.is-expanded.has-icon-left
+              = f.text_field :name_company, class: "input is-primary"
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label
+            = f.label :company_website
+        .field-body
+          .field
+            .control.is-expanded.has-icon-left
+              = f.text_field :company_website, class: "input is-primary"
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label
+            = f.label :description
+        .field-body
+          .field
+            .control.is-expanded.has-icon-left
+              = f.text_area :description, class: "textarea"
+            .control.is-expanded.has-icon-left
+              = f.submit button_text, class: "button is-primary is-small is-rounded"
+
+
