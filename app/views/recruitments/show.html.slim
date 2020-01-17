@@ -1,0 +1,17 @@
+.columns.is-multiline
+  .column
+    table.table.is-bordered.is-striped.is-narrow.is-fullwidth
+      thead
+        tr
+          th Nama Depan
+          th Nama Belakang
+          th Email 
+          th Nomor Telepon
+          th Alamat 
+      tbody
+          tr
+            td = @recruitment.first_name
+            td = @recruitment.last_name
+            td = @recruitment.email
+            td = @recruitment.phone_number
+            td = @recruitment.address

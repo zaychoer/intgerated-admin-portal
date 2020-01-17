@@ -1,17 +1,13 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :list_portfolio, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :handle_record_not_found
-
-  def new
-    @portfolio = Portfolio.new
-  end
-
-  def show
-    @portfolio = set_portfolio
-  end
 
   def index
     @portfolios = Portfolio.all.order("created_at DESC")
+  end
+
+  def new
+    @portfolio = Portfolio.new
   end
 
   def create
@@ -19,6 +15,10 @@ class PortfoliosController < ApplicationController
     return redirect_to new_portfolio_path, notice: @portfolio.errors.full_messages.to_setence unless @portfolio.valid?
     @portfolio.save!
     redirect_to portfolio_path(@portfolio), notice: "Data #{@portfolio.name_company} was successfully created."
+  end
+
+  def show
+    @portfolio = list_portfolio
   end
 
   def edit;end
@@ -40,8 +40,8 @@ class PortfoliosController < ApplicationController
   end
 
   private
-    def set_portfolio
-      @portfoliopo= Portfolio.find(params[:id])
+    def list_portfolio
+      @portfolio= Portfolio.find(params[:id])
     end
 
     def handle_record_rot_found

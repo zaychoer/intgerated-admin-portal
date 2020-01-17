@@ -1,0 +1,32 @@
+h1 Index
+
+main.column.main
+  nav.breadcrumb.is-small aria-label="breadcrumbs"
+    ul
+      li
+        a href="#"
+      li.is-active
+        a aria-current="page" href="#"
+  .level
+    .level-left
+      .level-item
+        .title
+          | Recruitment
+  .columns.is-multiline
+    .column
+      table.table.is-bordered.is-striped.is-narrow.is-fullwidth
+        thead
+          tr
+            th Nama Depan
+            th Nama Belakang
+            th Email
+            th Nomor Telepon
+            th Alamat
+        tbody
+          - @recruitments.each do |p|
+            tr
+              td = p.first_name
+              td = p.last_name
+              td = p.email
+              td = p.phone_number
+              td = p.address

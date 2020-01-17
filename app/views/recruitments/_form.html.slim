@@ -1,0 +1,44 @@
+.section.margin-top-multiline
+  = form_for @recruitment do |f|
+    .field.is-horizontal.is-margin-top
+      .field-label.is-normal
+        label.label
+          = f.label :first_name
+      .field-body
+        .field
+          .control.is-expanded.has-icon-left
+            = f.text_field :first_name, class: "input is-primary"
+    .field.is-horizontal
+      .field-label.is-normal
+        label.label
+          = f.label :last_name
+      .field-body
+        .field
+          .control.is-expanded.has-icon-left
+            = f.text_field :last_name, class: "input is-primary"
+    .field.is-horizontal
+      .field-label.is-normal
+        label.label
+          = f.label :email
+      .field-body
+        .field
+          .control.is-expanded.has-icon-left
+            = f.email_field :email, class: "input is-primary"
+    .field.is-horizontal
+      .field-label.is-normal
+        label.label
+          = f.label :phone_number
+      .field-body
+        .field
+          .control.is-expanded.has-icon-left
+            = f.number_field :phone_number, class: "input is-primary"
+    .field.is-horizontal
+      .field-label.is-normal
+        label.label
+          = f.label :address
+      .field-body
+        .field
+          .control.is-expanded.has-icon-left
+            = f.text_field "address", class: "input is-primary"
+          .control.is-expanded.has-icon-left
+            = f.submit button_text, class: "button is-primary is-small is-rounded"
