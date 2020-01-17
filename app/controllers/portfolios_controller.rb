@@ -21,9 +21,23 @@ class PortfoliosController < ApplicationController
     redirect_to portfolio_path(@portfolio), notice: "Data #{@portfolio.name_company} was successfully created."
   end
 
-  def update;end
   def edit;end
-  def destroy;end
+
+  def update
+    if @portfolio.update(portfolio_params)
+      redirect_to @portfolio, notice: "Data #{@portfolio.name_company} was successfully updated."
+
+      render :edit
+    end
+  end
+
+  def destroy
+    @portfolio.destroy
+
+    respond_to do |format|
+      format.html {redirect_to portfolios_url, notice: "Data #{@portfolio.name_company} was successfully destroyed." }
+    end
+  end
 
   private
     def set_portfolio
